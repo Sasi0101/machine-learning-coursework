@@ -23,8 +23,8 @@ X2 = testing_data.iloc[:, :128]  # Inputs are columns 0-127
 # Making a prediction
 predictions = random_forest_classifier.predict(X2)
 
-output = []
-print("Predictions: ", predictions)
+output = []  # All the output will be stored here
+
 # Combining the inputs to the output
 for i in range(len(predictions)):
     output.append(list(X2.iloc[i]) + [predictions[i]])

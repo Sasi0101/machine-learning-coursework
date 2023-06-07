@@ -1,5 +1,6 @@
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score, log_loss
 
 # Loading the training data
 training_data = pd.read_csv("TrainingDataBinary.csv", header=None)
@@ -21,7 +22,7 @@ X2 = testing_data.iloc[:, :128]  # Inputs are columns 0-127
 
 # Making a prediction
 predictions = random_forest_classifier.predict(X2)
-print("Predicitons: ", predictions)
+
 output = []  # All the output will be stored here
 
 # Combining the inputs to the output
